@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Быстрый поиск в Google</title>
+
+
+
+
+
+
+
+
+
+
+   <style>
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+            /* Для вертикального центрирования с помощью flexbox: */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* Или для вертикального центрирования с помощью grid: */
+            /* display: grid;
+            place-items: center; */
+        }
+    </style>
+
+
+
+
+
+
+</head>
+<body>
+<div class="container">
+    <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Введите ваш запрос">
+        <button type="button" onclick="searchGoogle()">Найти</button>
+    </form>
+
+</div>
+
+    <script>
+        function searchGoogle() {
+            // Получаем значение из поля ввода
+            const searchTerm = document.getElementById('searchInput').value;
+
+            // Создаем URL для поиска в Google
+            const googleUrl = `https://www.google.com/search?q=${searchTerm}`;
+
+            // Перенаправляем пользователя на созданный URL
+            window.location.href = googleUrl;
+        }
+    </script>
+</body>
+</html>
